@@ -2,8 +2,8 @@
 1. creare 5 div dentro container
 2. creare una funzione che mi fa un numero random dal 1-9
 3. usare la funzione random per estampare 5 numeri
-4. mettere un timer per 5 secondi
-5. dopo 5 secondi aparisce 5 prompt (uno doppo laltro) che ti chiede uno a uno i 5 numeri visti previamente (usero una funzione per ogni promt)
+4. mettere un timer per 5.1 secondi
+5. dopo 5 secondi spariscono i random number e apariscono 5 prompt (uno doppo laltro) che ti chiede uno a uno i 5 numeri visti previamente (usero una funzione per ogni promt)
 6. doppo caricare ogni valore si conferma che ogni numero sia vero , se sta tutto bene hai vinto
 7. se ce qualche errore hai perso e ti fa vedere il valore inserito e il valore reale */
 
@@ -19,7 +19,7 @@ for (let i = 0; i < 5; i++) {
 randomNumbers.forEach((randomNumber, i) => {
 
   const div = document.createElement('div');
-  div.textContent = `Número aleatorio: ${randomNumber}`;
+  div.textContent = `Numero ${i} = ${randomNumber}`;
   container.appendChild(div);
 
   if (i === 4) {
@@ -40,7 +40,7 @@ function promptForUserInput() {
   const userInputs = [];
 
   for (let i = 0; i < 5; i++) {
-    const userInput = prompt(`¿Cuál era el número del div ${i + 1}?`);
+    const userInput = prompt(`Qual era il ${i + 1} numero?`);
     userInputs.push(Number(userInput)); 
   }
 
@@ -57,9 +57,9 @@ function promptForUserInput() {
   // 7.
   const resultContainer = document.createElement('div');
   if (correct) {
-    resultContainer.innerHTML += '<p>Todas las respuestas son correctas.</p>';
+    resultContainer.innerHTML += '<p>Hai vinto, tutte le risposte sono correte. Simon Dice auguri</p>';
   } else {
-    resultContainer.innerHTML += `<p>Te equivocaste en ${incorrectCount} respuestas. Intenta de nuevo.</p>`;
+    resultContainer.innerHTML += `<p>ti sei svaghliato in ${incorrectCount} respueste. Simon e deluso</p>`;
   }
 
   container.appendChild(resultContainer);
