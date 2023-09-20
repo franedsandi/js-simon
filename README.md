@@ -12,6 +12,7 @@ Consigli del giorno:
 buon lavoro!
 ===
 step by step:
+1. creare 5 div dentro container
 1. creare una funzione che mi fa un numero random dal 1-9
 2. usare la funzione random per estampare 5 numeri
 3. mettere un timer per 5 secondi
