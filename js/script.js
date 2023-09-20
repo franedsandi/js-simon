@@ -12,7 +12,7 @@ const randomNumbers = [];
 
   // 1.
 for (let i = 0; i < 5; i++) {
-  const randomNumber = generateRandomNumber(1, 100);
+  const randomNumber = generateRandomNumber(1, 9);
   randomNumbers.push(randomNumber);
 }
   // 3.
@@ -20,7 +20,7 @@ randomNumbers.forEach((randomNumber, i) => {
 
   const div = document.createElement('div');
   div.textContent = `Numero ${i + 1} = ${randomNumber}`;
-  container.appendChild(div);
+  container.append(div);
 
   if (i === 4) {
       // 4.
@@ -62,5 +62,5 @@ function promptForUserInput() {
     resultContainer.innerHTML += `<p>Ti sei svagliato in ${incorrectCount} respueste. Simon e deluso...</p>`;
   }
 
-  container.appendChild(resultContainer);
+  container.append(resultContainer);
 }
