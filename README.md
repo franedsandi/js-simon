@@ -13,9 +13,9 @@ buon lavoro!
 ===
 step by step:
 1. creare 5 div dentro container
-1. creare una funzione che mi fa un numero random dal 1-9
-2. usare la funzione random per estampare 5 numeri
-3. mettere un timer per 5 secondi
-4. dopo 5 secondi aparisce 5 prompt (uno doppo laltro) che ti chiede uno a uno 5. ogni numero visto previamente
+2. creare una funzione che mi fa un numero random dal 1-9
+3. usare la funzione random per estampare 5 numeri
+4. mettere un timer per 5 secondi
+5. dopo 5 secondi aparisce 5 prompt (uno doppo laltro) che ti chiede uno a uno 5. ogni numero visto previamente
 6. doppo caricare ogni valore si conferma che ogni numero sia vero , se sta tutto bene hai vinto
 7. se ce qualche errore hai perso e ti fa vedere il valore inserito e il valore reale

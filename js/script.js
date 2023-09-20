@@ -3,7 +3,8 @@ const container = document.querySelector('.container');
 
 for (let i = 0; i < 5; i++) {
   const div = document.createElement('div');
-  div.textContent = `el numero a recordar es ${i + 1}`;
+  const randomNumber = generateRandomNumber(1, 9);
+  div.textContent = `Número aleatorio: ${randomNumber}`;
   container.appendChild(div);
 }
 
