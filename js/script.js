@@ -12,14 +12,14 @@ const randomNumbers = [];
 
   // 1.
 for (let i = 0; i < 5; i++) {
-  const randomNumber = generateRandomNumber(1, 9);
+  const randomNumber = generateRandomNumber(1, 100);
   randomNumbers.push(randomNumber);
 }
   // 3.
 randomNumbers.forEach((randomNumber, i) => {
 
   const div = document.createElement('div');
-  div.textContent = `Numero ${i} = ${randomNumber}`;
+  div.textContent = `Numero ${i + 1} = ${randomNumber}`;
   container.appendChild(div);
 
   if (i === 4) {
@@ -40,8 +40,8 @@ function promptForUserInput() {
   const userInputs = [];
 
   for (let i = 0; i < 5; i++) {
-    const userInput = prompt(`Qual era il ${i + 1} numero?`);
-    userInputs.push(Number(userInput)); 
+    const userInput = parseInt(prompt(`Qual era il ${i + 1} numero?`));
+    userInputs.push(userInput); 
   }
 
   // 6.
@@ -57,9 +57,9 @@ function promptForUserInput() {
   // 7.
   const resultContainer = document.createElement('div');
   if (correct) {
-    resultContainer.innerHTML += '<p>Hai vinto, tutte le risposte sono correte. Simon Dice auguri</p>';
+    resultContainer.innerHTML += '<p>Hai vinto, tutte le risposte sono correte. Simon dice auguri!!!</p>';
   } else {
-    resultContainer.innerHTML += `<p>ti sei svaghliato in ${incorrectCount} respueste. Simon e deluso</p>`;
+    resultContainer.innerHTML += `<p>Ti sei svagliato in ${incorrectCount} respueste. Simon e deluso...</p>`;
   }
 
   container.appendChild(resultContainer);
