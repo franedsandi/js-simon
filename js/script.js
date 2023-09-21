@@ -35,31 +35,38 @@ randomNumbers.forEach((randomNumber, i) => {
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-  // 5.
+// 5.
 function promptForUserInput() {
   const userInputs = [];
 
   for (let i = 0; i < 5; i++) {
     const userInput = parseInt(prompt(`Qual era il ${i + 1} numero?`));
-    userInputs.push(userInput); 
+    userInputs.push(userInput);
   }
 
   // 6.
   let correct = true;
   let incorrectCount = 0;
+  const incorrectNumbers = [];
 
   for (let i = 0; i < 5; i++) {
     if (userInputs[i] !== randomNumbers[i]) {
       correct = false;
       incorrectCount++;
+      incorrectNumbers.push({ expected: randomNumbers[i], actual: userInputs[i] });
     }
   }
+
   // 7.
   const resultContainer = document.createElement('div');
   if (correct) {
-    resultContainer.innerHTML += '<p>Hai vinto, tutte le risposte sono correte. Simon dice auguri!!!</p>';
+    resultContainer.innerHTML += '<p>Hai vinto, tutte le risposte sono corrette. Simon dice auguri!!!</p>';
   } else {
-    resultContainer.innerHTML += `<p>Ti sei svagliato in ${incorrectCount} respueste. Simon e deluso...</p>`;
+    resultContainer.innerHTML += `<p>Ti sei sbagliato in ${incorrectCount} risposte. Simon è deluso...</p>`;
+    resultContainer.innerHTML += '<p>Numeros incorrectos:</p>';
+    incorrectNumbers.forEach((incorrect, i) => {
+      resultContainer.innerHTML += `<p>Numero ${i + 1}: Era ${incorrect.expected}, tu hai scritto ${incorrect.actual}</p>`;
+    });
   }
 
   container.append(resultContainer);
