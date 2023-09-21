@@ -63,7 +63,7 @@ function promptForUserInput() {
     resultContainer.innerHTML += '<p>Hai vinto, tutte le risposte sono corrette. Simon dice auguri!!!</p>';
   } else {
     resultContainer.innerHTML += `<p>Ti sei sbagliato in ${incorrectCount} risposte. Simon è deluso...</p>`;
-    resultContainer.innerHTML += '<p>Numeros incorrectos:</p>';
+    resultContainer.innerHTML += '<p>Numeri svagliati:</p>';
     incorrectNumbers.forEach((incorrect, i) => {
       resultContainer.innerHTML += `<p>Numero ${i + 1}: Era ${incorrect.expected}, tu hai scritto ${incorrect.actual}</p>`;
     });
